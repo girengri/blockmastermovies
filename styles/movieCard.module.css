@@ -1,0 +1,27 @@
+.movieCard__container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movieCard__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movieCard__img__opcional {
+    width: 200px;
+}
+
+.movieCard__vote {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    padding: 15px;
+    border-radius: 40%;
+    background: #00000083;
+    font-weight: 700;
+    color: var(--white);
+}

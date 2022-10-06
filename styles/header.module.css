@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__container__links {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.header__link {
+    text-decoration: none;
+    padding-left: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    font-size: 16px;
+}
+
+.header__link__hover {
+    text-decoration: none;
+    padding-left: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.header__link:hover {
+    text-decoration: underline;
+    color: var(--primary);
+}
