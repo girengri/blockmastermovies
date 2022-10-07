@@ -1,4 +1,5 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
+import { ModalContext, MovieModalContext } from "../../context";
 
 import { IMovie } from "../../interfaces";
 
@@ -9,8 +10,19 @@ interface Props {
 }
 
 export const MovieCard: FC<Props> = ({ movie }) => {
+    const { toggleSideModal } = useContext(ModalContext);
+    const { addMovieToModal } = useContext(MovieModalContext);
+
+    const viewDetails = (movie: IMovie) => {
+        toggleSideModal();
+        addMovieToModal(movie);
+    };
+
     return (
-        <article className={styles.movieCard__container}>
+        <article
+            className={styles.movieCard__container}
+            onClick={() => viewDetails(movie)}
+        >
             {!movie.poster_path ? (
                 <picture>
                     <img

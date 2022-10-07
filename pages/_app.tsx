@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 
 import { SWRConfig } from "swr";
+import { ModalProvider, MovieModalProvider } from "../context";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -13,7 +14,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           fetch(resource, init).then((res) => res.json()),
       }}
     >
-      <Component {...pageProps} />
+      <ModalProvider>
+        <MovieModalProvider>
+          <Component {...pageProps} />
+        </MovieModalProvider>
+      </ModalProvider>
     </SWRConfig>
   );
 }
