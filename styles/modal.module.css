@@ -1,0 +1,38 @@
+.modal__voteAverage {
+    position: absolute;
+
+    background: var(--background-modal);
+    font-weight: 700;
+    top: 0;
+    transform: matrix(0.71, -0.41, 1.22, 0.71, 0, 0);
+    padding: 15px;
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+}
+
+.modal__image {
+    width: 282.45px;
+    height: 403.49px;
+    transform: matrix(0.71, -0.41, 1.22, 0.71, 0, 0);
+}
+
+.modal__close {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.modal__dates {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}

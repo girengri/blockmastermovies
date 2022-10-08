@@ -15,7 +15,10 @@ const HomePage: NextPage = () => {
   );
 
   return (
-    <MovieLayout title="Block Master - Principal" pageDescription={""}>
+    <MovieLayout
+      title="Block Master"
+      pageDescription="Busca las peliculas del momento aquí"
+    >
       <h2 className={styles.movieList__title}>Todas las peliculas</h2>
 
       {isLoading ? <FullScreenLoading /> : <MovieList movies={movies} />}

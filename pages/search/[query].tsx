@@ -2,7 +2,7 @@ import type { GetServerSideProps, NextPage } from "next";
 
 import { MovieLayout } from "../../components/layouts";
 
-import { MovieList } from "../../components/movies";
+import { MovieList, MovieModal } from "../../components/movies";
 import { FullScreenLoading } from "../../components/ui/FullScreenLoading";
 import { useMovies } from "../../hooks";
 
@@ -20,7 +20,10 @@ const SearchPage: NextPage<Props> = ({ query }) => {
     const foundMovies = movies.length > 0;
 
     return (
-        <MovieLayout title="Block Master - Principal" pageDescription={""}>
+        <MovieLayout
+            title="Block Master - Resultados"
+            pageDescription={`Resultados de busqueda de la pelicula ${query}`}
+        >
             <h2 className={styles.movieList__title}>Resultados de busqueda</h2>
 
             {!foundMovies && (
@@ -36,6 +39,8 @@ const SearchPage: NextPage<Props> = ({ query }) => {
             )}
 
             {isLoading ? <FullScreenLoading /> : <MovieList movies={movies} />}
+
+            <MovieModal />
         </MovieLayout>
     );
 };

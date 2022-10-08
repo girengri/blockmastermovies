@@ -20,12 +20,18 @@ export const MovieLayout: FC<Props> = ({
             <Head>
                 <title>{title}</title>
 
+                <meta name="author" content="Giovany Rendon" />
                 <meta name="description" content={pageDescription} />
-
+                <meta
+                    name="keywords"
+                    content={`${title},movies, peliculas, block master`}
+                />
+                
                 <meta name="og:title" content={title} />
                 <meta name="og:description" content={pageDescription} />
-
                 {imageFullUrl && <meta name="og:image" content={imageFullUrl} />}
+
+                <link rel="icon" href="/blockBuster.svg" />
             </Head>
 
             <nav className="container">

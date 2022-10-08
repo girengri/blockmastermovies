@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 
 import { MovieLayout } from "../../components/layouts";
 
-import { MovieList } from "../../components/movies";
+import { MovieList, MovieModal } from "../../components/movies";
 import { FullScreenLoading } from "../../components/ui/FullScreenLoading";
 import { useMovies } from "../../hooks";
 
@@ -14,10 +14,15 @@ const MostPopularPage: NextPage = () => {
     );
 
     return (
-        <MovieLayout title="Block Master - Principal" pageDescription={""}>
+        <MovieLayout
+            title="Block Master - Valoradas"
+            pageDescription="Listado de peliculas mas valoradas"
+        >
             <h2 className={styles.movieList__title}>Peliculas más valoradas</h2>
 
             {isLoading ? <FullScreenLoading /> : <MovieList movies={movies} />}
+
+            <MovieModal />
         </MovieLayout>
     );
 };
