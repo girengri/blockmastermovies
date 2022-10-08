@@ -31,3 +31,36 @@
     text-decoration: underline;
     color: var(--primary);
 }
+
+@media (max-width: 1140px) {
+    .nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header__container__links {
+        gap: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .header__container__links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    .header__link {
+        margin-top: 1rem;
+    }
+}

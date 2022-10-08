@@ -14,7 +14,7 @@ export const MovieModal = () => {
 
     return (
         <Modal isOpen={isModalOpen}>
-            <ModalHeader>
+            <ModalHeader className={styles.modal__picture__center}>
                 <div>
                     <picture>
                         <img
