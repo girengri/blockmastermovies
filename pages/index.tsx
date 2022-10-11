@@ -1,9 +1,8 @@
 import type { NextPage } from "next";
 
 import { MovieLayout } from "../components/layouts";
-import { MovieList } from "../components/movies";
-import { MovieModal } from "../components/movies/MovieModal";
-import { FullScreenLoading } from "../components/ui/FullScreenLoading";
+import { MovieList, MovieModal } from "../components/movies";
+import { CarouselMovies, FullScreenLoading } from "../components/ui";
 
 import { useMovies } from "../hooks";
 
@@ -19,6 +18,8 @@ const HomePage: NextPage = () => {
       title="Block Master"
       pageDescription="Busca las peliculas del momento aquí"
     >
+      <CarouselMovies />
+
       <h2 className={styles.movieList__title}>Todas las peliculas</h2>
 
       {isLoading ? <FullScreenLoading /> : <MovieList movies={movies} />}

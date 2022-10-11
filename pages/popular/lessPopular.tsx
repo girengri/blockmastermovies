@@ -3,7 +3,8 @@ import type { NextPage } from "next";
 import { MovieLayout } from "../../components/layouts";
 
 import { MovieList, MovieModal } from "../../components/movies";
-import { FullScreenLoading } from "../../components/ui/FullScreenLoading";
+import { FullScreenLoading } from "../../components/ui";
+
 import { useMovies } from "../../hooks";
 
 import styles from "../../styles/movieList.module.css";
