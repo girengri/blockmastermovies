@@ -5,7 +5,7 @@ Block Master es la plataforma de contenido más reciente en el mercado pero a la
 Con block master puede ver las ultimas peliculas del momento, agregar las que mas le gusten y eliminar las que no le llamen la atencion 
 
 
-Puede verlo aquí: <https://blockmasterapp-f8bbb.web.app/>
+Puede verlo aquí: <https://blockmastermovies.vercel.app/>
 
 ## Requerimientos
 - Tener instalado git en nuestro pc
@@ -14,7 +14,7 @@ Puede verlo aquí: <https://blockmasterapp-f8bbb.web.app/>
 ## 🔥 Instalación
 
 ```shell
-git clone --branch desarrolloGiovany https://github.com/girengri/blockmaster.git
+git clone --branch desarrolloGiovany https://github.com/girengri/blockmastermovies.git
 yarn install
 yarn dev
 ```
