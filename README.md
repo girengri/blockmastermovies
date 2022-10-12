@@ -2,7 +2,7 @@
 
 Block Master es la plataforma de contenido más reciente en el mercado pero a la vez la más potente.&nbsp; &nbsp; &nbsp;&nbsp;
 
-Con block master puede ver las ultimas peliculas del momento, agregar las que mas le gusten y eliminar las que no le llamen la atencion 
+Con block master puede ver las ultimas peliculas del momento. 
 
 
 Puede verlo aquí: <https://blockmastermovies.vercel.app/>
