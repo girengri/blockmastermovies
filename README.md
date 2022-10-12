@@ -1,34 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🍿 Block Master
 
-## Getting Started
+Block Master es la plataforma de contenido más reciente en el mercado pero a la vez la más potente.&nbsp; &nbsp; &nbsp;&nbsp;
 
-First, run the development server:
+Con block master puede ver las ultimas peliculas del momento, agregar las que mas le gusten y eliminar las que no le llamen la atencion 
 
-```bash
-npm run dev
-# or
+
+Puede verlo aquí: <https://blockmasterapp-f8bbb.web.app/>
+
+## Requerimientos
+- Tener instalado git en nuestro pc
+- Tener instalado node en nuestro pc
+
+## 🔥 Instalación
+
+```shell
+git clone --branch desarrolloGiovany https://github.com/girengri/blockmaster.git
+yarn install
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔍 Vistas 
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### 💻 Escritorio
+  
+![logo](https://res.cloudinary.com/girengri/image/upload/v1645216368/blockmasterimagenes/screencapture-blockmasterapp-f8bbb-web-app-iniciarsesion-2022-02-18-15_32_34_oschid.png)
+![logo](https://res.cloudinary.com/girengri/image/upload/v1645216409/blockmasterimagenes/screencapture-blockmasterapp-f8bbb-web-app-registro-2022-02-18-15_33_15_dsabzj.png)
+![logo](https://res.cloudinary.com/girengri/image/upload/v1645216938/blockmasterimagenes/screencapture-blockmasterapp-f8bbb-web-app-2022-02-18-15_42_03_bpslfy.png)
+![logo](https://res.cloudinary.com/girengri/image/upload/v1645217073/blockmasterimagenes/screencapture-blockmasterapp-f8bbb-web-app-masvaloradas-2022-02-18-15_43_07_oyz7iz.png)
+![logo](https://res.cloudinary.com/girengri/image/upload/v1645216630/blockmasterimagenes/screencapture-blockmasterapp-f8bbb-web-app-registroPeliculas-2022-02-18-15_36_55_q4r52e.png)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 📌 Stack
 
-## Learn More
+```shell
+CSS Modules
+HTML
+Next
+React
+Reactstrap
+SWR
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🌟 Autor
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* **Giovany Rendon**  - [@girengri](https://github.com/girengri)
