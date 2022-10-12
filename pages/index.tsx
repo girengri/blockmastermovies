@@ -1,17 +1,14 @@
+import { useState } from "react";
 import type { NextPage } from "next";
 
 import { MovieLayout } from "../components/layouts";
-import { MovieList, MovieModal } from "../components/movies";
-import { CarouselMovies, FullScreenLoading } from "../components/ui";
-
-import { useMovies } from "../hooks";
+import { MovieModal } from "../components/movies";
+import { CarouselMovies, Pagination } from "../components/ui";
 
 import styles from "../styles/movieList.module.css";
 
 const HomePage: NextPage = () => {
-  const { movies, isLoading } = useMovies(
-    `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.NEXT_PUBLIC_TMDB_API}&language=es-MX&page=1`
-  );
+  const [pageIndex, setPageIndex] = useState(1);
 
   return (
     <MovieLayout
@@ -22,7 +19,25 @@ const HomePage: NextPage = () => {
 
       <h2 className={styles.movieList__title}>Todas las peliculas</h2>
 
-      {isLoading ? <FullScreenLoading /> : <MovieList movies={movies} />}
+      <Pagination pageIndex={pageIndex} />
+
+      <section className={styles.pagination__container}>
+        {pageIndex > 1 && (
+          <button
+            className={styles.pagination__buttons}
+            onClick={() => setPageIndex(pageIndex - 1)}
+          >
+            Anterior
+          </button>
+        )}
+
+        <button
+          className={styles.pagination__buttons}
+          onClick={() => setPageIndex(pageIndex + 1)}
+        >
+          Siguiente
+        </button>
+      </section>
 
       <MovieModal />
     </MovieLayout>

@@ -29,8 +29,8 @@ export const MovieModal = () => {
             </ModalHeader>
 
             <ModalBody>
-                <div className={styles.modal__close}>
-                    <p onClick={toggleSideModal}>X</p>
+                <div className={styles.modal__close} onClick={toggleSideModal}>
+                    <p className={styles.modal__close__item}>X</p>
                 </div>
 
                 <div className={styles.modal__description}>

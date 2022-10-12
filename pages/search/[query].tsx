@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import type { GetServerSideProps, NextPage } from "next";
 
 import { MovieLayout } from "../../components/layouts";
@@ -14,8 +16,10 @@ interface Props {
 }
 
 const SearchPage: NextPage<Props> = ({ query }) => {
+    const [pageIndex, setPageIndex] = useState(1);
+
     const { movies, isLoading } = useMovies(
-        ` https://api.themoviedb.org/3/search/movie?api_key=${process.env.NEXT_PUBLIC_TMDB_API}&language=es-MX&query=${query}&page=1`
+        ` https://api.themoviedb.org/3/search/movie?api_key=${process.env.NEXT_PUBLIC_TMDB_API}&language=es-MX&query=${query}&page=${pageIndex}`
     );
 
     const foundMovies = movies.length > 0;
@@ -40,6 +44,24 @@ const SearchPage: NextPage<Props> = ({ query }) => {
             )}
 
             {isLoading ? <FullScreenLoading /> : <MovieList movies={movies} />}
+
+            <section className={styles.pagination__container}>
+                {pageIndex > 1 && (
+                    <button
+                        className={styles.pagination__buttons}
+                        onClick={() => setPageIndex(pageIndex - 1)}
+                    >
+                        Anterior
+                    </button>
+                )}
+
+                <button
+                    className={styles.pagination__buttons}
+                    onClick={() => setPageIndex(pageIndex + 1)}
+                >
+                    Siguiente
+                </button>
+            </section>
 
             <MovieModal />
         </MovieLayout>

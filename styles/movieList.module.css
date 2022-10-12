@@ -16,3 +16,26 @@
     align-items: center;
     justify-content: center;
 }
+
+.pagination__container {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination__buttons {
+    background: var(--primary);
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-weight: 700;
+    color: var(--background-modal);
+    transition: all 0.4s ease-in;
+}
+
+.pagination__buttons:hover {
+    background: var(--border);
+    color: var(--white);
+}
